@@ -6,7 +6,7 @@ namespace BootCamp.Chapter
     {
         static void Main(string[] args)
         {
-            bool again = true;
+            bool isAgain = true;
             do
             {
                 // Get info for BMI calculator
@@ -16,7 +16,7 @@ namespace BootCamp.Chapter
                 Console.WriteLine("What is your surname?");
                 string surName = Console.ReadLine();
                 Console.WriteLine("How old are you?");
-                int age = Int32.Parse(Console.ReadLine());
+                int age = int.Parse(Console.ReadLine());
                 Console.WriteLine("What is your weight(Kg)?");
                 float weight = float.Parse(Console.ReadLine());
                 Console.WriteLine("What is your height(Cm)?");
@@ -38,9 +38,9 @@ namespace BootCamp.Chapter
                 }
                 else
                 {
-                    again = false;
+                    isAgain = false;
                 }
-            } while (again);
+            } while (isAgain);
         }
     }
 }
