@@ -46,11 +46,9 @@
         {
             var newArray = new int[baseArray.Length];
 
-            int i = 0;
-            foreach (var values in baseArray)
+            for (int i = 0; i < baseArray.Length; i++)
             {
-                newArray[i] = values;
-                i++;
+                newArray[i] = baseArray[i];
             }
 
             return newArray;
