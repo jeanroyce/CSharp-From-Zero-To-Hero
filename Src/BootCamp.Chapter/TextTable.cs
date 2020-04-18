@@ -81,7 +81,7 @@ namespace BootCamp.Chapter
                 else
                 {
                     var emptyWord = new string(' ', maxLength);
-                    text.Append($"|{emptySpace}{emptyWord}{emptySpace}|{Environment.NewLine}");
+                    text.AppendLine($"|{emptySpace}{emptyWord}{emptySpace}|");
                 }
             }
 

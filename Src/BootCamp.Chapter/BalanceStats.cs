@@ -5,6 +5,10 @@ using System.Text;
 
 namespace BootCamp.Chapter
 {
+    public static class Constants
+    {
+        public const string Nothing = "N/A.";
+    }
     public static class BalanceStats
     {
         /// <summary>
@@ -12,7 +16,7 @@ namespace BootCamp.Chapter
         /// </summary>       
         public static string FindHighestBalanceEver(string[] peopleAndBalances)
         {
-            if (IsNullOrEmpty(peopleAndBalances)) return "N/A.";
+            if (IsNullOrEmpty(peopleAndBalances)) return Constants.Nothing;
             var (peopleNames, money) = ProcessPeopleAndAbalances(peopleAndBalances, "max");
 
             return $"{peopleNames} had the most money ever. {FixMoneyFormat(money)}.";
@@ -23,10 +27,10 @@ namespace BootCamp.Chapter
         /// </summary>
         public static string FindPersonWithBiggestLoss(string[] peopleAndBalances)
         {
-            if (IsNullOrEmpty(peopleAndBalances)) return "N/A.";
+            if (IsNullOrEmpty(peopleAndBalances)) return Constants.Nothing;
 
             var (peopleNames, money) = ProcessPeopleAndAbalances(peopleAndBalances, "min");
-            if (money >= 0) return "N/A.";
+            if (money >= 0) return Constants.Nothing;
 
             return $"{peopleNames} lost the most money. {FixMoneyFormat(money)}.";
         }
@@ -36,7 +40,7 @@ namespace BootCamp.Chapter
         /// </summary>
         public static string FindRichestPerson(string[] peopleAndBalances)
         {
-            if (IsNullOrEmpty(peopleAndBalances)) return "N/A.";
+            if (IsNullOrEmpty(peopleAndBalances)) return Constants.Nothing;
             var (peopleNames, money) = ProcessPeopleAndAbalances(peopleAndBalances, "rich");
 
             var isPlural = IsMultiplePeople(peopleNames);
@@ -54,7 +58,7 @@ namespace BootCamp.Chapter
         /// </summary>
         public static string FindMostPoorPerson(string[] peopleAndBalances)
         {
-            if (IsNullOrEmpty(peopleAndBalances)) return "N/A.";
+            if (IsNullOrEmpty(peopleAndBalances)) return Constants.Nothing;
             var (peopleNames, money) = ProcessPeopleAndAbalances(peopleAndBalances, "poor");
 
             var isPlural = IsMultiplePeople(peopleNames);
@@ -111,7 +115,6 @@ namespace BootCamp.Chapter
             return (listOfNames, moneyToAnalyse);
         }
 
-        // Convert an array of string to array of floats
         private static float[] ConvertToArrayOfFloats(string[] numbers)
         {
             CultureInfo.CurrentCulture = CultureInfo.InvariantCulture;
