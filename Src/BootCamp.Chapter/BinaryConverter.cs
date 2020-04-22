@@ -12,9 +12,9 @@ namespace BootCamp.Chapter
             if (!Regex.IsMatch(binary, @"^[01]+$")) throw new InvalidBinaryNumberException(binary);
 
             var num = 0;
-            foreach (var bin in binary)
+            foreach (var digit in binary)
             {
-                if (!int.TryParse(bin.ToString(), out var value)) throw new ArgumentOutOfRangeException("An unexpected error occurred");
+                var value = int.Parse(digit.ToString());
                 var temp = num * 2;
                 num = temp + value;
             }

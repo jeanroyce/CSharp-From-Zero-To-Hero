@@ -10,23 +10,22 @@ namespace BootCamp.Chapter
         {
             Console.OutputEncoding = System.Text.Encoding.Unicode;
 
-            MainMenu();
-
+            DisplayMenu();
         }
 
-        private static void MainMenu()
+        private static void DisplayMenu()
         {
             Console.Clear();
             Console.WriteLine("Welcome! Choose one option");
 
-            var options = new List<string>
+            var options = new[]
             {
                 "Exit",                         // [0]
                 "Example of movement keys",     // [1]
                 "Convert binary to integer",    // [2]
                 "Convert integer to binary"     // [3]
             };
-            for (var i = 1; i < options.Count; i++) Console.WriteLine($"{i}. {options[i]}");
+            for (var i = 1; i < options.Length; i++) Console.WriteLine($"{i}. {options[i]}");
             Console.WriteLine($"{0}. {options[0]}");
 
             while (true)
@@ -107,7 +106,7 @@ namespace BootCamp.Chapter
         {
             Console.WriteLine("Press any key to continue");
             Console.ReadKey();
-            MainMenu();
+            DisplayMenu();
         }
 
         private static void ClearLine()
