@@ -10,20 +10,19 @@ namespace BootCamp.Chapter
     {
         public static string Encrypt(string message, byte shift)
         {
-            return ApplyAlgorithm(message, shift);
+            return ApplyCaesarCipher(message, shift);
         }
-
         
         public static string Decrypt(string message, byte shift)
         {
-            return ApplyAlgorithm(message, -shift);
+            return ApplyCaesarCipher(message, -shift);
         }
 
-        private static string ApplyAlgorithm(string message, int shift)
+        private static string ApplyCaesarCipher(string message, int shift)
         {
-            if (message == "") return "";
-            if (message == null) return null;
-
+            if(string.IsNullOrEmpty(message)) return message;
+            const int emptySpaceId = 32;
+            
             // ISO-8859-1 for one byte per letter for most of all. AsciiEx like.
             // UTF-8 fail in portuguese letters(like é, à, ç), unicode things go wrong.
             var encoding = Encoding.GetEncoding("ISO-8859-1");
@@ -31,7 +30,7 @@ namespace BootCamp.Chapter
 
             for (var i = 0; i < messageToBytes.Length; i++)
             {
-                if (messageToBytes[i] == 32) continue;
+                if (messageToBytes[i] == emptySpaceId) continue;
                 var newByte = messageToBytes[i] + shift;
                 if (newByte < 0) newByte = 256 + newByte;
                 if (newByte > 256) newByte %= 256;
