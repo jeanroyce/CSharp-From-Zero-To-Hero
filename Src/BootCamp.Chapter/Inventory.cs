@@ -32,13 +32,17 @@
         /// </summary>
         public void RemoveItem(Item item)
         {
-            if (IsNullOrEmpty(_items) || !IsItemInInventory(item.GetName())) return;
+            if (IsNullOrEmpty(_items) || !InventoryContains(item.GetName())) return;
 
             var updatedItems = new Item[_items.Length - 1];
             var wasItemFound = false;
             for (var i = 0; i < _items.Length; i++)
             {
-                if (!wasItemFound && _items[i].GetName().Equals(item.GetName()))
+                if (
+                    !wasItemFound &&
+                    _items[i].GetName()
+                        .Equals(item.GetName())
+                    )
                 {
                     wasItemFound = true;
                     continue;
@@ -55,12 +59,12 @@
             if (IsNullOrEmpty(_items)) return new Item[0];
             foreach (var items in _items)
             {
-                if (items.GetName().Equals(name))return new Item[] {items};
+                if (items.GetName().Equals(name))return new[] {items};
             }
             return new Item[0];
         }
         
-        private bool IsItemInInventory(string name)
+        private bool InventoryContains(string name)
         {
             return FindItemByName(name).Length != 0;
         }

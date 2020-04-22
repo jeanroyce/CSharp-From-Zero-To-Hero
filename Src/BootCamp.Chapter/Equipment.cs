@@ -11,11 +11,11 @@ namespace BootCamp.Chapter
         public void SetWeapon(Weapon weapon)
         {
             // Update attack
-            _attack = IsEquipNull(_weapon) ? 0 : _weapon.GetBaseAttack();
+            _attack = (_weapon == null) ? 0 : _weapon.GetBaseAttack();
             
             // Update weight
-            var oldWeight = IsEquipNull(_weapon) ? 0 : _weapon.GetWeight();
-            var newWeight = IsEquipNull(weapon) ? 0 : weapon.GetWeight();
+            var oldWeight = (_weapon == null) ? 0 : _weapon.GetWeight();
+            var newWeight = (weapon == null) ? 0 : weapon.GetWeight();
             _weight += newWeight - oldWeight;
             
             _weapon = weapon;
@@ -96,6 +96,7 @@ namespace BootCamp.Chapter
         {
             return _defense;
         }
+        
         /// <summary>
         /// Returns damage done by weapon.
         /// </summary>
@@ -108,19 +109,13 @@ namespace BootCamp.Chapter
 
         private void UpdateEquippedArmourInfo(Armour oldItem, Armour newItem)
         {
-            var oldDefense = IsEquipNull(oldItem) ? 0 : oldItem.GetBaseDefense();
-            var newDefense = IsEquipNull(newItem) ? 0 : newItem.GetBaseDefense();
+            var oldDefense = (oldItem == null) ? 0 : oldItem.GetBaseDefense();
+            var newDefense = (newItem == null) ? 0 : newItem.GetBaseDefense();
             _defense += newDefense - oldDefense;
             
-            var oldWeight = IsEquipNull(oldItem) ? 0 : oldItem.GetWeight();
-            var newWeight = IsEquipNull(newItem) ? 0 : newItem.GetWeight();
+            var oldWeight = (oldItem == null) ? 0 : oldItem.GetWeight();
+            var newWeight = (newItem == null) ? 0 : newItem.GetWeight();
             _weight += newWeight - oldWeight;
         }
-        
-        private bool IsEquipNull(Item item)
-        {
-            return item == null;
-        }
-        
     }
 }
