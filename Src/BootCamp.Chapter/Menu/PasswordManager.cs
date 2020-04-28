@@ -1,18 +1,17 @@
 ﻿using System;
 using System.Text;
 
-namespace BootCamp.Chapter
+namespace BootCamp.Chapter.Menu
 {
     public class PasswordManager
     {
         public void DisplayMenu()
         {
-            var menuOptions = new[] {"Login", "Register", "Exit"};
             var menu = new InteractiveMenu();
-            var option = menu.Build(menuOptions);
+            var option = menu.Build();
 
-            if (option == 0) DisplayLoginMenu();
-            if (option == 1) DisplayRegisterMenu();
+            if (option == MenuOptions.Login) DisplayLoginMenu();
+            if (option == MenuOptions.Register) DisplayRegisterMenu();
         }
 
         private void DisplayRegisterMenu()
