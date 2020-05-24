@@ -1,12 +1,15 @@
 ﻿using System;
+using System.Threading.Tasks;
+using CliFx;
 
 namespace BootCamp.Chapter
 {
-    public class Program
+    public static class Program
     {
-        public static void Main(string[] args)
-        {
-
-        }
+        public static async Task<int> Main(string[] args) =>
+            await new CliApplicationBuilder()
+                .AddCommandsFromThisAssembly()
+                .Build()
+                .RunAsync();
     }
 }
