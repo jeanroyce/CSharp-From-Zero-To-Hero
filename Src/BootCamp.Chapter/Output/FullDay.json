@@ -1,0 +1,127 @@
+{
+  "Summary": [
+    {
+      "Hour": 0,
+      "Earn": 0.0,
+      "Count": 0
+    },
+    {
+      "Hour": 1,
+      "Earn": 0.0,
+      "Count": 0
+    },
+    {
+      "Hour": 2,
+      "Earn": 0.0,
+      "Count": 0
+    },
+    {
+      "Hour": 3,
+      "Earn": 0.0,
+      "Count": 0
+    },
+    {
+      "Hour": 4,
+      "Earn": 0.0,
+      "Count": 0
+    },
+    {
+      "Hour": 5,
+      "Earn": 0.0,
+      "Count": 0
+    },
+    {
+      "Hour": 6,
+      "Earn": 0.0,
+      "Count": 0
+    },
+    {
+      "Hour": 7,
+      "Earn": 0.0,
+      "Count": 0
+    },
+    {
+      "Hour": 8,
+      "Earn": 0.0,
+      "Count": 0
+    },
+    {
+      "Hour": 9,
+      "Earn": 0.0,
+      "Count": 0
+    },
+    {
+      "Hour": 10,
+      "Earn": 0.0,
+      "Count": 0
+    },
+    {
+      "Hour": 11,
+      "Earn": 0.0,
+      "Count": 0
+    },
+    {
+      "Hour": 12,
+      "Earn": 0.0,
+      "Count": 0
+    },
+    {
+      "Hour": 13,
+      "Earn": 0.0,
+      "Count": 0
+    },
+    {
+      "Hour": 14,
+      "Earn": 0.0,
+      "Count": 0
+    },
+    {
+      "Hour": 15,
+      "Earn": 0.0,
+      "Count": 0
+    },
+    {
+      "Hour": 16,
+      "Earn": 0.0,
+      "Count": 0
+    },
+    {
+      "Hour": 17,
+      "Earn": 0.0,
+      "Count": 0
+    },
+    {
+      "Hour": 18,
+      "Earn": 0.0,
+      "Count": 0
+    },
+    {
+      "Hour": 19,
+      "Earn": 0.0,
+      "Count": 0
+    },
+    {
+      "Hour": 20,
+      "Earn": 8.0,
+      "Count": 3
+    },
+    {
+      "Hour": 21,
+      "Earn": 0.0,
+      "Count": 0
+    },
+    {
+      "Hour": 22,
+      "Earn": 25.0,
+      "Count": 2
+    },
+    {
+      "Hour": 23,
+      "Earn": 10.5,
+      "Count": 2
+    }
+  ],
+  "RushHour": [
+    23
+  ]
+}

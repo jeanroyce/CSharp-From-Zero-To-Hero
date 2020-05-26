@@ -1,0 +1,27 @@
+{
+  "Summary": [
+    {
+      "Hour": 20,
+      "Earn": 8.0,
+      "Count": 3
+    },
+    {
+      "Hour": 21,
+      "Earn": 0.0,
+      "Count": 0
+    },
+    {
+      "Hour": 22,
+      "Earn": 25.0,
+      "Count": 2
+    },
+    {
+      "Hour": 23,
+      "Earn": 10.5,
+      "Count": 2
+    }
+  ],
+  "RushHour": [
+    23
+  ]
+}

@@ -3,7 +3,7 @@ using System.Globalization;
 using BootCamp.Chapter.Exceptions;
 using Newtonsoft.Json;
 
-namespace BootCamp.Chapter.Models
+namespace BootCamp.Chapter
 {
     public class Transaction
     {
